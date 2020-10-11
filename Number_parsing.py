@@ -1,15 +1,24 @@
+def bar_avval (y) :
+    if y == 1 :
+        return 0
+    from math import sqrt
+    vb = 0
+    for zzx in range (2,int(sqrt(y)+1)):
+        if y % zzx == 0 :
+            vb += 1
+    if vb == 0 :
+        return 1
+    else:
+        return 0
+        
 
 
 
-
-def adad_avval (y) :
+def range_avval (x,y) :
     qwe = list()
-    for zx in range (2,y):
-        vb = 0
-        for zzx in range (2,zx):
-            if zx % zzx == 0 :
-                vb += 1
-        if vb == 0 :
+    for zx in range (x,y+1):
+        vv = bar_avval (zx)
+        if vv == 1 :
             qwe.append (zx)
     
     return qwe
@@ -17,6 +26,7 @@ def adad_avval (y) :
 
 
 def taj(y) :
+    from math import sqrt
     wer = []
     oi = y
     if y == 2 :
@@ -27,16 +37,27 @@ def taj(y) :
         return [2,2]
     if y == 1:
         return [1]
-    qp = adad_avval (round(y/2)+2)
-    qp.append (y)
+    qp = range_avval (2,int(y/2)+1)
+    if bar_avval (y) == 1:
+        qp.append (y)
     for not1 in qp:
         
         while oi % not1 == 0 :
             wer.append (not1)
             oi = int (oi / not1)
+    return wer
 
 
 
+while 1==1:
+    q3 = input('insert your control         ')
+    if q3.split('(')[0] == "range" :
+        print(range_avval(int(q3.split('(')[1].split(')')[0].split(',')[0]),int(q3.split('(')[1].split(')')[0].split(',')[1])))
+    elif q3.split('(')[0] == "taj":
+        print(taj(int(q3.split('(')[1].split(')')[0])))
+    elif q3.split('(')[0] == "bar":
+        print(bar_avval(int(q3.split('(')[1].split(')')[0])))
+        
 
 
 
