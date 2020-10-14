@@ -1,6 +1,6 @@
 
 
-bak =  lambda x,y : 1 if x%y == 0 or y%x == 0 else 0
+bak =  lambda x,y : 1 if (x%y == 0 or y%x == 0) and not(x == 0 or y == 0 or x == 1 or y == 1) else 0
 
 
 
