@@ -54,7 +54,10 @@ while 1==1:
     if q3.split('(')[0] == "range" :
         print(range_avval(int(q3.split('(')[1].split(')')[0].split(',')[0]),int(q3.split('(')[1].split(')')[0].split(',')[1])))
     elif q3.split('(')[0] == "taj":
-        print(taj(int(q3.split('(')[1].split(')')[0])))
+        iii = taj(int(q3.split('(')[1].split(')')[0]))
+        if len(iii) == 1 :
+            iii = [1,iii[0]]
+        print(iii)
     elif q3.split('(')[0] == "bar":
         print(bar_avval(int(q3.split('(')[1].split(')')[0])))
         
