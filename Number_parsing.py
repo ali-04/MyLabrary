@@ -1,16 +1,25 @@
+
+
+bak =  lambda x,y : 1 if (x%y == 0 or y%x == 0) and not(x == 0 or y == 0 or x == 1 or y == 1) else 0
+
+
+
+
 def bar_avval (y) :
     if y == 1 :
         return 0
     from math import sqrt
     vb = 0
     for zzx in range (2,int(sqrt(y)+1)):
-        if y % zzx == 0 :
+        if bak(y ,zzx) == 1 :
             vb += 1
     if vb == 0 :
         return 1
     else:
         return 0
         
+
+
 
 
 
@@ -42,7 +51,7 @@ def taj(y) :
         qp.append (y)
     for not1 in qp:
         
-        while oi % not1 == 0 :
+        while bak(oi ,not1) == 1 :
             wer.append (not1)
             oi = int (oi / not1)
     return wer
