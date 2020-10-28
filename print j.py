@@ -4,6 +4,10 @@ def print_unit(x):
     a = len(x)
     print  (str('-'*(a+2)) + '\n' + '|' + x + '|' + '\n' + str('-'*(a+2)))
 
+
+
+
+
 def print_j(x):
     n = 0
     vaz = 1
@@ -41,6 +45,10 @@ def print_j(x):
 
 
 
+
+
+
+
 def print_l (x):
     lis = list()
     
@@ -68,4 +76,6 @@ def print_l (x):
 
 
 
-print_l(['c','w','','n','ggg'])
+
+d = 0
+#print_l(['c','w','','n','ggg'])
