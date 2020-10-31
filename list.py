@@ -3,6 +3,18 @@
 
 
 
+
+def bin (x,y) :
+    for q in y :
+        if not (q in x) :
+            return False
+    return True
+
+
+
+
+
+
 def list_get (lis,x,y):
     if len(lis) > x :
         return lis[x]
@@ -21,10 +33,29 @@ def blist (lis,x):
 
 
 
+def b_list(x,y):
+    for q in x:
+        y.append(q)
+
+
+
+
 
 def alist (lis,x,y):
     for q in range (0, x - len(lis) +1 ):
         lis.append (y)
+
+
+
+def taf_lis (x,y) :
+    q = list()
+    b_list (x,q)
+    for q10 in y:
+        if q10 in q :
+            q.remove (q10)
+            
+    return q 
+    
 
 
 
