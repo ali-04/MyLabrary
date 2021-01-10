@@ -15,6 +15,23 @@ def bin (x,y) :
 
 
 
+
+
+
+
+
+def strl (l) :
+
+    list =  []
+    for q in l :
+
+        list.append(str(q))
+    
+    return list 
+
+ 
+
+
 def list_get (lis,x,y):
     if len(lis) > x :
         return lis[x]
